@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script>
+            var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.3.1";
+          
+            !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+            (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+            i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+            }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+          
+            aa('init', {
+              appId: '6PZ4DAKX3S',
+              apiKey: '4039afceb67603529e515096f03b0dd1',
+            });
+          </script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+        
+            <div class="row">
+                <div id="searchbox"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div><strong>Genres:</strong></div>
+                <div id="refinement-list-genre"></div>
+                <div><strong>Rating:</strong></div>
+                <div id="refinement-list-rating"></div>
+              </div>   
+              <div class="col-md-4">
+                  <div><strong>Movies:</strong></div>
+                  <div id="hits-container"></div>
+              </div>
+            </div>
+            <div class="row"><div id="pagination"></div></div>
+        </div>
+        <script type="text/javascript" src="./index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
