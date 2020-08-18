@@ -1,20 +1,27 @@
 const searchClient = algoliasearch('6PZ4DAKX3S', '4039afceb67603529e515096f03b0dd1');
 
 
+
 const search = instantsearch({
   indexName: 'movies_Production_copy1',
   searchClient,
   insightsClient: window.aa
 });
 
+const userToken = isAuthenticated
+       ? currentUser.id
+       : instantsearch.getInsightsAnonymousUserToken();
+
 search.addWidgets([
     instantsearch.widgets.configure({
-      "clickAnalytics": true
+      "clickAnalytics": true,
+      userToken
     
     }),
   
   instantsearch.widgets.searchBox({
     container: '#searchbox',
+    placeholder: 'Search movies...'
   }),
 
   instantsearch.widgets.hits({
@@ -48,6 +55,7 @@ search.addWidgets([
       limit: 7,
       showMore: true,
       searchable: true,
+      searchablePlaceholder: 'Search genres...',
       cssClasses: {
         list: 'text-primary',}
     }),
